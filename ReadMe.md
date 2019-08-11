@@ -9,7 +9,7 @@ Toolbox for Computing the spatiotemproal dynamics of gut microbiota (CODY), incl
   -  reach (Installation: in R console command window, devtools::install_github("schmidtchristoph/reach/reach", force = TRUE))
   -  RStudio (RStudio version 1.1.442)
 
-* R for results presentation
+* R packages for results presentation
   -  ggplot2
   -  tidyverse
   -  grid
@@ -19,10 +19,15 @@ Toolbox for Computing the spatiotemproal dynamics of gut microbiota (CODY), incl
   -  stringr
 
 * Matlab 2016b
+  - This is required and called by R during calculation process.
 
 ## CODY Toolbox
 ```
-1. Lanch Toolbox and Navigation
+1. Clone or download "CODY" toolbox package to local computer, open R, and navigate to CODY installation directory
+```
+
+```
+2. Lanch Toolbox and Navigation
 ```
 To **lanch** CODY toolbox on local computer, type the following command in your R console command window:
 
@@ -35,9 +40,8 @@ The **Navigation Page** will look like this
 <div align=center><img src="img/img/Navigation.png" width=1000/></div>
 <br />
 
-
 ```
-2. "Home" - CODY Methodology
+3. "Home" - CODY Methodology
 ```
 The methodoloy overview of CODY is shown in the "Home" tab panel. 
 Basically, CODY is composed by three multiscale frameworks that describe microbial growth in species-level, ecosystem-level, within site-specific colon regions including lumen and mucus.
@@ -45,19 +49,17 @@ Basically, CODY is composed by three multiscale frameworks that describe microbi
 <div align=center><img src="img/img/Home_page.png" width=650/></div>
 
 ```
-3. "ReadMe" - Guideline to run CODY and switch conditions
+4. "ReadMe" - Guideline to run CODY and switch conditions
 ```
 * Please follow the step-by-step readme guideline in the "ReadMe" tab panel. 
-* Please always select the "Cohort Catergory" at the beginning of a new round of simulations.
+* In order to avoid re-run simulations, Please always select the "Cohort Catergory" at the beginning of a new round of simulations.
         
 <div align=center><img src="img/img/ReadMe_new.png" width=650/ ></div>
 
 Follow ReadMe guidelines before performing simulations. 
 
-Specifically, always select "Cohort Catergory" before each round of calculation
-
 ```
-4. "Run Calculatioin" in  "Quantitative Abundance Profiles" Panel
+5. "Run Calculatioin" in  "Quantitative Abundance Profiles" Panel
 ```
 ## User Input 
 **Implement simulations:** Choosing **"Cohort Catergory"**
@@ -70,7 +72,7 @@ Specifically, always select "Cohort Catergory" before each round of calculation
 
 * Four kinds of microbial-accessible carbohydrates are involved
 
-* Provided in g/day, within the reasonable ranges specified
+* Units in g/day, within the reasonable ranges specified
 
 [example: infant cohort default settings]
 
@@ -87,7 +89,6 @@ Diet-switch/intervention:
   <div align=center><img src="img/img/Infant_diet.png" width=600 /></div>
 
 * Set diet composition for each period, for example:
-  -  With default settings, users could reproduce manuscript results for Infant/Adult.
   -  Here we will use the default settings of infant to show the consequent results
  
 *  **Click "Run Calculation" button** on the right top, nearby **"Cohort Catergory"**.
@@ -96,13 +97,13 @@ Diet-switch/intervention:
   <br />
 
 * **Simulation would start, please wait.** The calculation process would last for 5~10 minutes. 
-  -  A **process bar** would appear to the console, indicating how long the simulation would last, as below:
+  -  A **process bar** would appear to R console, indicating how long each round of simulation would last:
   <br />
 
   <div align=center><img src="img/img/waitbar.png" width=400/></div>
   <br />
 
-  -  The simulation include both baseline and intervention. A second waitbar would indicate the intervention simulation starts:
+  -  The simulation include both baseline and intervention periods. A second waitbar would indicate the intervention simulation starts:
   <br />
 
   <div align=center><img src="img/img/waitbar_2nd.png" width=400/></div>
@@ -152,7 +153,7 @@ The longitudinal microbial profiles in Lumen_I for infant cohort would shown in 
 <br />
        
 ## **Output II:** "Three-dimension Visulization"
-* Select **"3D-Visulization"** to see the spatiotemporal profiles, here we show Fpr of infant cohort
+* Select **"3D-Visulization"** to see the spatiotemporal profiles, here we show spatiotemporal Fpr profiles of infant cohort
 
 <br />
 <div align=center><img src="img/img/Infnat_3d_Fpr.png" width=400/></div>
@@ -165,12 +166,17 @@ The longitudinal microbial profiles in Lumen_I for infant cohort would shown in 
 <br /> 
 
 
-## **Output IV:** for comparison across multiple colon sites
+## **Output IV:** Compare microbial/metabolite variability across multiple colon sites
 ### Navigating to tab panel of "Longitudinal Site-specific Variability Profiles"
 * This page would enable to compare how microbial/metabolite changes across multiple colon sites.
-* Select "Site Variable" to "microbial" and switch "In vivo Site-specific" as "lumen" for infant cohort. 
-  -  "Site Variable" can vary among: microbial/metabolite
-  -  "In  vivo Site-specific" can vary among lumen/mucosa/feces/blood
+* Select "Site Variable" as "microbial" and switch "In vivo Site-specific" to "lumen" for infant cohort. 
+  -  "Site Variable" can vary among
+      -  microbial/metabolite
+  -  "In  vivo Site-specific"
+      -  lumen
+      -  mucosa
+      -  feces
+      -  blood
 
 * The microbial levels acorss lumen sites would appear on the screen:
 
