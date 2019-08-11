@@ -216,5 +216,5 @@ The longitudinal microbial profiles in Lumen_I for infant cohort would shown in 
 
 ### Feces microbial variability is also consistent with above under diet-manipulation
 <br />
-<div align=center><img src="img/img/longitudinal_output_same.png" width=500/></div>
+<div align=center><img src="img/img/longitudinal_output_same.png" width=700/></div>
 <br />
