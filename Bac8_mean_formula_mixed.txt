@@ -1,0 +1,25 @@
+Type	Species	RelativeAbundance
+Newborn	Bacteroides fragilis	0.08066579795294693
+4 Months	Bacteroides fragilis	0.06811329475474567
+12 Months	Bacteroides fragilis	0.027540492241012637
+Newborn	Bacteroides thetaiotaomicron	0.007941348845792085
+4 Months	Bacteroides thetaiotaomicron	0.02385084250268398
+12 Months	Bacteroides thetaiotaomicron	0.013169732668160666
+Newborn	Bifidobacterium adolescentis	0.019128740372390457
+4 Months	Bifidobacterium adolescentis	0.013025046110592433
+12 Months	Bifidobacterium adolescentis	0.003057103876570997
+Newborn	Bifidobacterium breve	0.03591866092187167
+4 Months	Bifidobacterium breve	0.06458464380878572
+12 Months	Bifidobacterium breve	0.0038392983475484216
+Newborn	Bifidobacterium longum	0.0645232375148939
+4 Months	Bifidobacterium longum	0.18858246546321425
+12 Months	Bifidobacterium longum	0.011142509891175578
+Newborn	Eubacterium hallii	3.2703323483955146e-5
+4 Months	Eubacterium hallii	5.367019247501603e-7
+12 Months	Eubacterium hallii	0.0028285720141883633
+Newborn	Faecalibacterium prausnitzii	4.314021656235013e-4
+4 Months	Faecalibacterium prausnitzii	8.224665289527585e-6
+12 Months	Faecalibacterium prausnitzii	0.016970341920938957
+Newborn	Roseburia intestinalis	1.0345285754000617e-6
+4 Months	Roseburia intestinalis	9.114531184235618e-6
+12 Months	Roseburia intestinalis	0.01686772290812031

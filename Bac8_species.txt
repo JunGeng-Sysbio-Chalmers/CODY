@@ -1,0 +1,8 @@
+Bacteroides thetaiotaomicron
+Bacteroides fragilis
+Bifidobacterium longum
+Bifidobacterium breve
+Eubacterium hallii
+Faecalibacterium prausnitzii
+Roseburia intestinalis
+Bifidobacterium adolescentis
