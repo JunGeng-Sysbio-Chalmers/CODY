@@ -33,6 +33,8 @@ To **lanch** CODY toolbox on local computer, type the following command in your 
 
 <p align=center font color=red>runAPP()</font></p>
 
+For MAC users, alternative way is to open "ui.R" and click "run APP" button in the right corner to launch CODY toolbox.
+
 CODY toolbox will launch!
 
 The **Navigation Page** will look like this
@@ -218,3 +220,20 @@ The longitudinal microbial profiles in Lumen_I for infant cohort would shown in 
 <br />
 <div align=center><img src="img/img/longitudinal_output_same.png" width=700/></div>
 <br />
+
+### Feces microbial variability could also be observed from longitudinal site-specific variability
+<br />
+<div align=center><img src="img/img/diet_manipulation_feces.png" width=700/></div>
+<br />
+
+### Lumen microbial variability kept the same 
+<br />
+<div align=center><img src="img/img/microbial_manipulation.png" width=700/></div>
+<br />
+
+### Plasma metabolite variability is also consistent with above under diet-manipulation
+<br />
+<div align=center><img src="img/img/plasma_manipulation.png" width=700/></div>
+<br />
+
+
