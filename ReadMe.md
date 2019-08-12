@@ -23,9 +23,9 @@ Toolbox for Computing the spatiotemproal dynamics of gut microbiota (CODY), incl
 
 ## CODY Toolbox
 ```
-1. Clone or download "CODY" toolbox package to local computer, open R, and navigate to CODY installation directory
+1. Toolbox Installation
 ```
-
+To install, clone or download "CODY" toolbox package to local computer, open R, and navigate to the directory where "CODY" is installed.
 ```
 2. Lanch Toolbox and Navigation
 ```
