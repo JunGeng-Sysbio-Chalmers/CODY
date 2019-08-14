@@ -31,7 +31,7 @@ To install, clone or download "CODY" toolbox package to local computer, open R, 
 ```
 To **lanch** CODY toolbox on local computer, type the following command in your R console command window:
 
-<p align=center font color=red>runAPP()</font></p>
+<p align=center font color=red>runApp()</font></p>
 
 For MAC users, alternative way is to open "ui.R" and click "run APP" button in the right corner to launch CODY toolbox.
 
@@ -154,8 +154,8 @@ The longitudinal microbial profiles in Lumen_I for infant cohort would shown in 
 <div align=center><img src="img/img/Infant_lumen2_mets.png" width=650/></div>
 <br />
        
-## **Output II:** "Three-dimension Visulization"
-* Select **"3D-Visulization"** to see the spatiotemporal profiles, here we show spatiotemporal Fpr profiles of infant cohort
+## **Output II:** "Three-dimension Visualization"
+* Select **"3D-Visualization"** to see the spatiotemporal profiles, here we show spatiotemporal Fpr profiles of infant cohort
 
 <br />
 <div align=center><img src="img/img/Infnat_3d_Fpr.png" width=400/></div>
