@@ -1,5 +1,5 @@
 library(shiny)
-library(shinyWidgets)
+#library(shinyWidgets)
 Cohort_catergory <- c("","Infant", "Adult")
 
 all_paras<-c("cohort_catergory","diet_regime","lumen_variable","mucus_variable","feces_variable","variable_3d")
