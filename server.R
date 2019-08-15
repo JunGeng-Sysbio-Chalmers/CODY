@@ -1083,7 +1083,7 @@ observe({
     
     if(input$variable_3d=="")return(NULL)
     # req(input$variable_3d)
-    outfile<-"Metabolites_3d.jpg"
+    outfile<-"./www/Metabolites_3d.jpg"
     h6("Spatiotemporal Variability")
     br()
     tags$img(src = outfile,contentType = 'image/jpg',
