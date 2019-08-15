@@ -1,7 +1,7 @@
 function Result_total=run_Simulation(diet,cohort) 
 diet_BF=diet(1,:);
 diet_SF=diet(2,:);
-Tanks={'Lumen_1','Lumen_2','Lumen_3','Lumen_4','Mucosa_1','Mucosa_2','Mucosa_3','Mucosa_4','Blood','Feces'};
+Tanks={'Lumen_1','Lumen_2','Lumen_3','Lumen_4','Mucosa_1','Mucosa_2','Mucosa_3','Mucosa_4','Rectum','Blood','Feces'};
 
 if strcmpi(cohort,'Infant')
     if exist('Preidiction_RA_exp_infant.csv', 'file')==2
