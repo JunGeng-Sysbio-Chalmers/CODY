@@ -1077,13 +1077,27 @@ observe({
     results2<-runMatlabFct("restul_total=run_Simulatin_3d(cohort_info,index_input)")
   })
   
+  
+  outfile_3d<-reactive({
+    req(input$variable_3d)
+    if(input$cohort_catergory==""||is.null(diet_regime()))return(NULL)
+    if(input$cohort_catergory=="Infant"){
+      return(paste0("Metabolite_3d_",plot_3d_index(),".jpg"))
+    }
+    if(input$cohort_catergory=="Adult"){
+      return(paste0("Metabolite_3d_adult_",plot_3d_index(),".jpg"))
+    }
+  })
+  
   output$plot6<-renderUI({
     # req(v$doCalc)
     req(d3_plot$plot)
     
     if(input$variable_3d=="")return(NULL)
     # req(input$variable_3d)
-    outfile<-"./www/Metabolites_3d.jpg"
+    # outfile<-"Metabolites_3d.jpg"
+    outfile<-outfile_3d()
+    
     h6("Spatiotemporal Variability")
     br()
     tags$img(src = outfile,contentType = 'image/jpg',
