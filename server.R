@@ -278,7 +278,7 @@ observe({
     if(input$cohort_catergory==""||is.null(diet_regime()))return(NULL)
     switch(input$cohort_catergory,
            "Infant" = return(read.csv(paste0("Community_10tanks_infant_BF_SF_new_","Lumen_1.csv"))),
-           "Adult" = return(read.csv(paste0("community_10tank_adult_concate_profiles_","Lumen_1.csv")))
+           "Adult" = return(read.csv(paste0("Community_10tank_adult_concate_profiles_","Lumen_1.csv")))
     )
       })
 
