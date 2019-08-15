@@ -175,7 +175,7 @@ end
 
 % set(gcf,'unit','centimeters','position',[17 27 25 30]);
 set(gcf, 'Units', 'Normalized', 'OuterPosition', [0, 0.04, 1, 0.96]);
-figure('Renderer', 'painters', 'Position', [10 10 600 1000]);
+h1=figure('Renderer', 'painters', 'Position', [10 10 600 1000]);
 
 surf(Blg_X',Blg_Y',Blg_SpTm,'FaceAlpha',0.75,'edgeColor','none')
 colorbar
@@ -192,15 +192,18 @@ set(get(gca,'YLabel'),'String','Colon Site');
 xlim([0 1000]);
 zlim([0 30]); 
 
+% a='Metabolite_3d_12.jpg'
 
 view(-35,30)
 % axis off
-
+output_file=strcat('Metabolite_3d_',num2str(index),'.jpg');
 % export_fig Metabolites_3d.png -transparent
-export_fig Metabolites_3d.jpg -transparent
+% export_fig Metabolites_3d.jpg -transparent
+export_fig(sprintf(output_file), h1);
 
 fig_3d_dir='./www/';
-copyfile('Metabolites_3d.jpg',fig_3d_dir);
+% copyfile('Metabolites_3d.jpg',fig_3d_dir);
+copyfile(output_file,fig_3d_dir);
 
 end
 
