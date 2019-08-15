@@ -143,11 +143,8 @@ ui<-shinyUI(navbarPage("CODY",
                             br(),
                             br(),
                             "Please visit",
-                            a("this site", href="https://github.com/JunGeng-Sysbio-Chalmers/CODY1.0_SourceCode"),   ## shiny website
-                            "for more information on code availability and results.",
                             br(),
                             br(),
-                            a("See the code", href="https://github.com/JunGeng-Sysbio-Chalmers/CODY"),        ## code website!!
                             br(),
                             br(),
                             "Any questions or comments can be sent to",
