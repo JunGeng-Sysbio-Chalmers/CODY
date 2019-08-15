@@ -1,5 +1,5 @@
 library(shiny)
-#library(shinyWidgets)
+library(shinyWidgets)
 Cohort_catergory <- c("","Infant", "Adult")
 
 all_paras<-c("cohort_catergory","diet_regime","lumen_variable","mucus_variable","feces_variable","variable_3d")
@@ -27,7 +27,7 @@ ui<-shinyUI(navbarPage("CODY",
                        tabPanel("Quantitative Abundance Profiles",
                                 fluidRow(
                                   column(4,
-                                         h4(strong("Spatiotemporal Visulization")),
+                                         h4(strong("Spatiotemporal Visualization")),
                                          tags$img(src='CODY.png',height=275,width=275, align="center")
                                          ),
                                          
@@ -71,13 +71,13 @@ ui<-shinyUI(navbarPage("CODY",
                                          br(),
                                          br(),
                                          br(),
-                                         h4(strong('Three-dimension Visulization')),
+                                         h4(strong('Three-dimension visualization')),
                                          div(strong('Please select a variable:',style="color: #1d1d1d;font-family: helvetica; font-weight: lighter;
                                              font-size: 16px; text-align: left;")),
                                          br(),
 
                                          fluidRow(
-                                           column(7,h5(strong('3D-Visulization'))),
+                                           column(7,h5(strong('3D-Visualization'))),
                                            column(5, selectInput("variable_3d", NA,
                                                                  c("Blg","Bfr","Fpr","Acetate","Butyrate","Propionate")))
                                            ),
@@ -89,7 +89,10 @@ ui<-shinyUI(navbarPage("CODY",
                                          div("The calculation would proceed for 10 ~ 20 minutes, Please wait...",
                                               style="color: #6e6e6e;font-family: helvetica; font-weight: lighter;
                                              font-size: 19px; text-align: left;margin-left:auto;margin-right:auto"),
-                                         h4(strong("Longitudinal Prediction: Please select Colon site and Species")),
+                                         h4(strong("Longitudinal Prediction of Absolute Abundance")),
+                                         
+                                         div(strong('Please select Colon site and Species:',style="color: #1d1d1d;font-family: helvetica; font-weight: lighter;
+                                             font-size: 16px; text-align: left;")),
                                          fluidRow(
                                            column(6,h5(strong('Colon Site'))),
                                            column(6,selectInput('site', NA, c("Lumen_I","Lumen_II","Lumen_III","Lumen_IV",
@@ -104,7 +107,7 @@ ui<-shinyUI(navbarPage("CODY",
                                          
                                          plotOutput("lineplot",height = "700px", width = "450px"),
                                   
-                                         h4(strong('Longitudinal in vitro Feces Relative Abundance Predictions')),
+                                         h4(strong('Longitudinal in vitro feces relative abundance predictions')),
                                          br(),
                                          plotOutput('plot4',height = "500px")
                                                     # height = "500px")))
