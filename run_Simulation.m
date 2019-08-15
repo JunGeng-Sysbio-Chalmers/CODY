@@ -25,7 +25,7 @@ elseif strcmpi(cohort,'Adult')
             delete('prediction_format.csv');
         end
     for i=1:length(Tanks)
-        outfile=strcat('community_10tank_adult_concate_profiles_',Tanks{i},'.csv');
+        outfile=strcat('Community_10tank_adult_concate_profiles_',Tanks{i},'.csv');
         if exist(outfile, 'file')==2
             delete(outfile);
         end
@@ -34,7 +34,7 @@ elseif strcmpi(cohort,'Adult')
     Result_BF=main_CM_adult_Baseline(diet_BF,nspc);
     nspc=2:8;
     Result_SF=main_CM_adult_Intervention(diet_SF,nspc,Result_BF);
-    out_filename='community_10tank_adult_concate_profiles';
+    out_filename='Community_10tank_adult_concate_profiles';
     Result_total=concate_BSL_Intv(diet,Result_BF,Result_SF,out_filename);
                         
 end
