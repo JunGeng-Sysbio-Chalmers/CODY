@@ -1052,6 +1052,23 @@ observe({
   #        alt = "Spatiotemporal Variability")
   # })
   
+  # Sys.time()
+  
+  outfile_3d<-reactive({
+    req(input$variable_3d)
+    my_timestamp<-gsub("[\\: \\-]","_",Sys.time())
+    
+    if(input$cohort_catergory==""||is.null(diet_regime()))return(NULL)
+    if(input$cohort_catergory=="Infant"){
+      return(paste0("Metabolite_3d_",my_timestamp,".jpg"))
+    }
+    if(input$cohort_catergory=="Adult"){
+      return(paste0("Metabolite_3d_adult_",my_timestamp,".jpg"))
+    }
+  })
+  
+  # list.files(pattern = glob2rx(pattern = "Metabolite_*.jpg")) 
+  
   
   # observe({
   #   req(input$cohort_catergory,diet_regime(), input$variable_3d,v$doCalc)
@@ -1074,21 +1091,29 @@ observe({
     req(d3_plot$plot)
     index_input<-plot_3d_index()
     cohort_info<-input$cohort_catergory
-    results2<-runMatlabFct("restul_total=run_Simulatin_3d(cohort_info,index_input)")
+    outfile<-outfile_3d()
+    
+    met_files<-list.files(pattern = glob2rx("Metabolite_*.jpg"))
+    unlink(met_files)
+    
+    met_files<-list.files(path="www/", pattern = glob2rx("Metabolite_*.jpg"))
+    unlink(paste0("www/",met_files))
+    
+    results2<-runMatlabFct("restul_total=run_Simulatin_3d(cohort_info,index_input,outfile)")
   })
   
   
-  outfile_3d<-reactive({
-    req(input$variable_3d)
-    if(input$cohort_catergory==""||is.null(diet_regime()))return(NULL)
-    if(input$cohort_catergory=="Infant"){
-      return(paste0("Metabolite_3d_",plot_3d_index(),".jpg"))
-    }
-    if(input$cohort_catergory=="Adult"){
-      return(paste0("Metabolite_3d_adult_",plot_3d_index(),".jpg"))
-    }
-  })
-  
+  # outfile_3d<-reactive({
+  #   req(input$variable_3d)
+  #   if(input$cohort_catergory==""||is.null(diet_regime()))return(NULL)
+  #   if(input$cohort_catergory=="Infant"){
+  #     return(paste0("Metabolite_3d_",plot_3d_index(),".jpg"))
+  #   }
+  #   if(input$cohort_catergory=="Adult"){
+  #     return(paste0("Metabolite_3d_adult_",plot_3d_index(),".jpg"))
+  #   }
+  # })
+  # 
   output$plot6<-renderUI({
     # req(v$doCalc)
     req(d3_plot$plot)
