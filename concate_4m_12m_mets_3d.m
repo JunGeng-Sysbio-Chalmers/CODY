@@ -1,5 +1,5 @@
 
-function Result_total=concate_4m_12m_mets_3d(Result_BF,Result_SF,index)
+function Result_total=concate_4m_12m_mets_3d(Result_BF,Result_SF,index,filename)
 %% index is the bacterial/metabolites that want to vitulize
 addpath('./export_fig-master');
 % Res_4m=load('20181024_4m_diet_302h.mat');
@@ -196,14 +196,14 @@ zlim([0 30]);
 
 view(-35,30)
 % axis off
-output_file=strcat('Metabolite_3d_',num2str(index),'.jpg');
+% output_file=strcat('Metabolite_3d_',num2str(index),'.jpg');
 % export_fig Metabolites_3d.png -transparent
 % export_fig Metabolites_3d.jpg -transparent
-export_fig(sprintf(output_file), h1);
+export_fig(sprintf(filename), h1);
 
 fig_3d_dir='./www/';
 % copyfile('Metabolites_3d.jpg',fig_3d_dir);
-copyfile(output_file,fig_3d_dir);
+copyfile(filename,fig_3d_dir);
 
 end
 
